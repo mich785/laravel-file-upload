@@ -8,7 +8,7 @@
 </head>
 <body>
     <h1>Upload File </h1>
-    <form method="GET" action="" enctype="multipart/form-data">
+    <form method="post" action="{{route('upload.store')}}" enctype="multipart/form-data">
         @csrf
         <input type="file" name="file" ><br>
         <button type="submit">Upload File</button>
