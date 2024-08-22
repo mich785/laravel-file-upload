@@ -36,3 +36,4 @@ class UploadController extends Controller
         return back()->with('success', 'File uploaded and stored in the database successfully');
     }
 }
+
