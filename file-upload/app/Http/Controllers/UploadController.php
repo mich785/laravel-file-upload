@@ -19,7 +19,8 @@ class UploadController extends Controller
     {
         // Validate the file input
         $request->validate([
-            'file' => 'required|mimes:jpg,jpeg,png,pdf|max:2048',
+           'file' => 'required|mimes:jpg,jpeg,png,pdf,doc,docx|max:2048',
+
         ]);
 
         // Get file data

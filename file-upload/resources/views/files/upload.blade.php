@@ -8,8 +8,16 @@
 </head>
 <body>
     <h1>Upload File </h1>
+    <div>
+        @if (session()->has('success'))
+            <div>
+                {{session('success')}}
+            </div>
+        @endif
+    </div>
     <form method="post" action="{{route('upload.store')}}" enctype="multipart/form-data">
         @csrf
+        <label for="file" class="file-label">Upload Birth Certificate (JPG, JPEG, PNG, PDF, DOC, DOCX)</label>
         <input type="file" name="file" ><br>
         <button type="submit">Upload File</button>
     </form>
